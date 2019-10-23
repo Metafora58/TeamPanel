@@ -8,5 +8,7 @@ Scaffold-DbContext "Server=localhost\SQLEXPRESS;Database=TeamPanel;Trusted_Conne
 
 TODO:
 Api: All needed methods, new ApiException models, pagination, filtration, excludes and includes
+
 Client: Frontend, model validation for starters
+
 DAL: All methods
