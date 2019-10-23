@@ -7,6 +7,7 @@ If you want to change models, create an sql for it, add your sql to "SQLs" folde
 Scaffold-DbContext "Server=localhost\SQLEXPRESS;Database=TeamPanel;Trusted_Connection=True;Integrated Security=true;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models -f -context TeamPanelContext -project "TeamPanel.DAL"
 
 TODO:
+
 Api: All needed methods, new ApiException models, pagination, filtration, excludes and includes
 
 Client: Frontend, model validation for starters
