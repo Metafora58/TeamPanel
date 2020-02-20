@@ -13,7 +13,7 @@ namespace TeamPanel.DAL.Repositories
 {
     public class TeamsRepository : ITeamsRepository
     {
-        TeamPanelContext Context;
+        readonly TeamPanelContext Context;
 
         public TeamsRepository(TeamPanelContext context)
         {

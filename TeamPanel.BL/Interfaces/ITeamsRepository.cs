@@ -8,7 +8,7 @@ namespace TeamPanel.BL.Interfaces
 {
     public interface ITeamsRepository
     {
-        Task CreateTeam(BL.Models.Team team);
+        Task<BL.Models.Team> CreateTeam(BL.Models.Team team);
 
         Task<BL.Models.Team> GetTeam(int id);
 

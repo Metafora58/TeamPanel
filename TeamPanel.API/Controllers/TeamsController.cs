@@ -13,7 +13,7 @@ namespace TeamPanel.API.Controllers
     [ApiController]
     public class TeamsController : ControllerBase
     {
-        ITeamsRepository _teamsRepository;
+        readonly ITeamsRepository _teamsRepository;
 
         public TeamsController(ITeamsRepository teamsRepository)
         {
@@ -60,9 +60,9 @@ namespace TeamPanel.API.Controllers
         [HttpPatch]
         [Route("id")]
         [ApiConventionMethod(typeof(ApiConventions), nameof(ApiConventions.EditActivity))]
-        public async Task<ActionResult> EditTeam([FromRoute]int id, [FromBody]BL.Models.Activity activity)
+        public async Task<ActionResult> EditTeam([FromRoute]int id, [FromBody]BL.Models.Team team)
         {
-            await _teamsRepository.EditActivity(id, activity);
+            await _teamsRepository.EditTeam(id, team);
 
             return NoContent();
         }
@@ -72,7 +72,7 @@ namespace TeamPanel.API.Controllers
         [ApiConventionMethod(typeof(ApiConventions), nameof(ApiConventions.NoContent))]
         public async Task<ActionResult> DeleteTeam([FromRoute]int id)
         {
-            await _teamsRepository.DeleteActivity(id);
+            await _teamsRepository.DeleteTeam(id);
 
             return NoContent();
         }

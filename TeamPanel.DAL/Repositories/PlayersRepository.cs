@@ -12,7 +12,7 @@ namespace TeamPanel.DAL.Repositories
 {
     public class PlayersRepository : IPlayersRepository
     {
-        TeamPanelContext Context;
+        readonly TeamPanelContext Context;
 
         public PlayersRepository(TeamPanelContext context)
         {
